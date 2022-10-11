@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
     
     
     
-    
+
     
     
     //MARK: - IBOutlets
@@ -31,12 +31,30 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(true)
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Child")
+     
         do {
+            
             let results = try context.fetch(fetchRequest)
             for result in results as! [Child]  {
+                
                 nameLabel.text = result.value(forKey: "name") as? String ?? ""
+                
                 secondNameLabel.text = result.value(forKey: "secondName") as? String ?? ""
-                numberOfClassLabel.text = "Я учусь в \(result.numberOfClass!) классе"
+                
+                if numberOfClassLabel.text != nil {
+//                    numberOfClassLabel.text = "Я учусь в \(result.numberOfClass!) классе"
+                    numberOfClassLabel.text = result.numberOfClass
+                } else {
+                    return
+                }
+                
+                
+                if profileImage.image != nil {
+                    profileImage.image = UIImage(data: result.value(forKey: "photo" ) as! Data)
+                } else {
+                    return
+                }
+                
                 print(results)
             }
         } catch {
@@ -44,15 +62,19 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    
+    
+   
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.clipsToBounds = true
-        profileImage.layer.cornerRadius = profileImage.frame.height / 2
-        
     }
     
     
     //MARK: - MainCode
+    
     
     
     
@@ -68,14 +90,18 @@ class ProfileViewController: UIViewController {
             
             nameLabel.text = newPlaceVc.nameTF.text
             secondNameLabel.text = newPlaceVc.secondNameTF.text
-            numberOfClassLabel.text = newPlaceVc.numberOfClassTF.text
+            numberOfClassLabel.text = "Я учусь в \(newPlaceVc.numberOfClassTF.text!) классе"
+            profileImage.image = newPlaceVc.imageRedact.image
+            let png = profileImage.image?.pngData()
+            
             
             let childObject = Child(entity: entityDesc!, insertInto: context)
             childObject.setValue(nameLabel.text, forKey: "name")
             childObject.setValue(secondNameLabel.text, forKey: "secondName")
             childObject.setValue(numberOfClassLabel.text, forKey: "numberOfClass")
+            childObject.setValue(png, forKey: "photo")
             do {
-            try context.save()
+                try context.save()
             } catch {
                 print(error)
             }

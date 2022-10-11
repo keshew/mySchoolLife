@@ -17,11 +17,13 @@
 		8604135928EC44BA003251FC /* marks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8604135828EC44BA003251FC /* marks.storyboard */; };
 		8604135B28EC4539003251FC /* homework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8604135A28EC4539003251FC /* homework.storyboard */; };
 		8618C7CD28EC61FA0049E739 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618C7CC28EC61FA0049E739 /* ProfileViewController.swift */; };
+		8631C79728F5B72E00C3AF23 /* HomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631C79628F5B72E00C3AF23 /* HomeworkTableViewCell.swift */; };
+		8631C79928F5B73A00C3AF23 /* HomeworkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631C79828F5B73A00C3AF23 /* HomeworkTableViewController.swift */; };
+		8665BA9A28F08B8000EEF2B7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8665BA9928F08B8000EEF2B7 /* TableViewController.swift */; };
 		866FB14328EC598300086D87 /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866FB14228EC598300086D87 /* HomeworkViewController.swift */; };
-		866FB14528EC59AD00086D87 /* HomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866FB14428EC59AD00086D87 /* HomeworkTableViewCell.swift */; };
-		866FB14A28EC5B3300086D87 /* MarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866FB14928EC5B3300086D87 /* MarkViewController.swift */; };
-		866FB14C28EC5B4000086D87 /* MarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866FB14B28EC5B4000086D87 /* MarkTableViewCell.swift */; };
 		86BEEAA828EC845300371C10 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BEEAA728EC845300371C10 /* ProfileTableViewController.swift */; };
+		86CB7E2328F324780083E40F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CB7E2228F324780083E40F /* TableViewCell.swift */; };
+		86F73A2A28F080400071EB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F73A2928F080400071EB97 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +39,13 @@
 		8604135828EC44BA003251FC /* marks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = marks.storyboard; sourceTree = "<group>"; };
 		8604135A28EC4539003251FC /* homework.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = homework.storyboard; sourceTree = "<group>"; };
 		8618C7CC28EC61FA0049E739 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8631C79628F5B72E00C3AF23 /* HomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewCell.swift; sourceTree = "<group>"; };
+		8631C79828F5B73A00C3AF23 /* HomeworkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewController.swift; sourceTree = "<group>"; };
+		8665BA9928F08B8000EEF2B7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		866FB14228EC598300086D87 /* HomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
-		866FB14428EC59AD00086D87 /* HomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewCell.swift; sourceTree = "<group>"; };
-		866FB14928EC5B3300086D87 /* MarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkViewController.swift; sourceTree = "<group>"; };
-		866FB14B28EC5B4000086D87 /* MarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewCell.swift; sourceTree = "<group>"; };
 		86BEEAA728EC845300371C10 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		86CB7E2228F324780083E40F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		86F73A2928F080400071EB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				8604135A28EC4539003251FC /* homework.storyboard */,
-				866FB14428EC59AD00086D87 /* HomeworkTableViewCell.swift */,
+				8631C79628F5B72E00C3AF23 /* HomeworkTableViewCell.swift */,
+				8631C79828F5B73A00C3AF23 /* HomeworkTableViewController.swift */,
 				866FB14228EC598300086D87 /* HomeworkViewController.swift */,
 			);
 			path = HomeWork;
@@ -112,8 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				8604135828EC44BA003251FC /* marks.storyboard */,
-				866FB14928EC5B3300086D87 /* MarkViewController.swift */,
-				866FB14B28EC5B4000086D87 /* MarkTableViewCell.swift */,
+				8665BA9928F08B8000EEF2B7 /* TableViewController.swift */,
+				86F73A2928F080400071EB97 /* ViewController.swift */,
+				86CB7E2228F324780083E40F /* TableViewCell.swift */,
 			);
 			path = MarkGroup;
 			sourceTree = "<group>";
@@ -192,14 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8631C79928F5B73A00C3AF23 /* HomeworkTableViewController.swift in Sources */,
 				86BEEAA828EC845300371C10 /* ProfileTableViewController.swift in Sources */,
 				8604134028EC3B85003251FC /* AppDelegate.swift in Sources */,
 				866FB14328EC598300086D87 /* HomeworkViewController.swift in Sources */,
+				8631C79728F5B72E00C3AF23 /* HomeworkTableViewCell.swift in Sources */,
+				86CB7E2328F324780083E40F /* TableViewCell.swift in Sources */,
 				8604134228EC3B85003251FC /* SceneDelegate.swift in Sources */,
-				866FB14C28EC5B4000086D87 /* MarkTableViewCell.swift in Sources */,
-				866FB14A28EC5B3300086D87 /* MarkViewController.swift in Sources */,
-				866FB14528EC59AD00086D87 /* HomeworkTableViewCell.swift in Sources */,
 				8618C7CD28EC61FA0049E739 /* ProfileViewController.swift in Sources */,
+				86F73A2A28F080400071EB97 /* ViewController.swift in Sources */,
+				8665BA9A28F08B8000EEF2B7 /* TableViewController.swift in Sources */,
 				8604134A28EC3B85003251FC /* mySchoolLife.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +364,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +394,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

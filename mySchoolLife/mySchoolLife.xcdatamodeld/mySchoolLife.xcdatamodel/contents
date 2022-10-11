@@ -3,9 +3,20 @@
     <entity name="Child" representedClassName="Child" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="numberOfClass" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="secondName" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Homework" representedClassName="Homework" syncable="YES" codeGenerationType="class">
+        <attribute name="homework" optional="YES" attributeType="String"/>
+        <attribute name="subject" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Subjects" representedClassName="Subjects" syncable="YES" codeGenerationType="class">
+        <attribute name="marks" optional="YES" attributeType="String"/>
+        <attribute name="subjects" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="Child" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Child" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Subjects" positionX="-63" positionY="27" width="128" height="59"/>
+        <element name="Homework" positionX="-63" positionY="18" width="128" height="59"/>
     </elements>
 </model>

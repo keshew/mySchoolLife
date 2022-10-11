@@ -1,20 +1,20 @@
 //
-//  HomeworkViewController.swift
+//  ViewController.swift
 //  mySchoolLife
 //
-//  Created by Артём Коротков on 04.10.2022.
+//  Created by Артём Коротков on 07.10.2022.
 //
 
 import UIKit
 import CoreData
 
-class HomeworkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
     
     var fetchController: NSFetchedResultsController<NSFetchRequestResult> = {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Homework")
-        let sortDesc = NSSortDescriptor(key: "subject", ascending: true)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Subjects")
+        let sortDesc = NSSortDescriptor(key: "subjects", ascending: true)
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         fetchRequest.sortDescriptors = [sortDesc]
         let resultCotroller = NSFetchedResultsController<NSFetchRequestResult>(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
@@ -45,37 +45,37 @@ class HomeworkViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeworkTableViewCell
-        let homework = fetchController.object(at: indexPath) as! Homework
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let subj = fetchController.object(at: indexPath) as! Subjects
         
-        cell.hwLabel.text = homework.homework
-        cell.subjectLabel?.text = homework.subject
+        cell.marksLabel.text = subj.marks
+        cell.subectLabel?.text = subj.subjects
         
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let homework = fetchController.object(at: indexPath) as! Homework
-        performSegue(withIdentifier: "redact", sender: homework)
+        let subject = fetchController.object(at: indexPath) as! Subjects
+        performSegue(withIdentifier: "add", sender: subject)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "redact" {
-            let controller = segue.destination as! HomeworkTableViewController
-            controller.homework = sender as? Homework
+        if segue.identifier == "add" {
+            let controller = segue.destination as! TableViewController
+            controller.subject = sender as? Subjects
         }
     }
 }
 
 
 
-extension HomeworkViewController:  NSFetchedResultsControllerDelegate {
-
+extension ViewController:  NSFetchedResultsControllerDelegate {
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableview.beginUpdates()
     }
-
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
@@ -95,49 +95,52 @@ extension HomeworkViewController:  NSFetchedResultsControllerDelegate {
             }
         case .update:
             if let indexPath = indexPath {
-                let homework = fetchController.object(at: indexPath) as! Homework
-                let cell = tableview.cellForRow(at: indexPath) as! HomeworkTableViewCell
-                cell.subjectLabel.text = homework.subject
-                cell.hwLabel.text = homework.homework
+                let subject = fetchController.object(at: indexPath) as! Subjects
+                let cell = tableview.cellForRow(at: indexPath) as! TableViewCell
+                cell.subectLabel.text = subject.subjects
+                cell.marksLabel.text = subject.marks
             }
         @unknown default:
             break
         }
     }
-
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableview.endUpdates()
     }
-
-
-
+    
+    
+    
 }
 
 
 
-extension HomeworkViewController {
-
-
+extension ViewController {
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let homework = fetchController.object(at: indexPath) as! Homework
+            let subject = fetchController.object(at: indexPath) as! Subjects
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            context.delete(homework)
+            context.delete(subject)
             do {
                 try context.save()
-
+                
             } catch {
                 print(error)
             }
-
+            
         }
-
+        
     }
-
+    
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         .delete
     }
-
-
-
+    
+    
+    
 }
+
+
+
