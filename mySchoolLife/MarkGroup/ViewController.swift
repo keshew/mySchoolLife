@@ -10,7 +10,12 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    //MARK: - Outlets
+    
     @IBOutlet weak var tableview: UITableView!
+    
+    //MARK: - var/let
     
     var fetchController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Subjects")
@@ -21,6 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return resultCotroller
     }()
     
+    //MARK: - overeide
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +36,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } catch {
             print(error)
         }
-        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "add" {
+            let controller = segue.destination as! TableViewController
+            controller.subject = sender as? Subjects
+        }
     }
     
+    
+    //MARK: - interface
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchController.sections {
@@ -60,15 +73,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "add", sender: subject)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "add" {
-            let controller = segue.destination as! TableViewController
-            controller.subject = sender as? Subjects
-        }
-    }
 }
 
-
+//MARK: - extensions
 
 extension ViewController:  NSFetchedResultsControllerDelegate {
     

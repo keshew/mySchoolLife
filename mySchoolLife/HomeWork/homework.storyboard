@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Homework View Controller-->
+        <!--Домашнее задание-->
         <scene sceneID="CtG-oQ-Mpo">
             <objects>
                 <viewController id="Ydg-Ob-g0i" customClass="HomeworkViewController" customModule="mySchoolLife" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,24 +21,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="74" id="xLB-RX-BUh" customClass="HomeworkTableViewCell" customModule="mySchoolLife" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="74" id="GkC-pY-jH8" customClass="HomeworkTableViewCell" customModule="mySchoolLife" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLB-RX-BUh" id="dfV-5i-fAx">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GkC-pY-jH8" id="XNt-Qn-YhN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="frx-rU-O9T">
-                                                    <rect key="frame" x="40" y="7" width="334" height="60"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-qD-DH5">
+                                                    <rect key="frame" x="40" y="12.5" width="334" height="49"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6S-Hp-JxT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="31"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xw-7L-4yV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="25"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-um-eIS">
-                                                            <rect key="frame" x="0.0" y="39" width="334" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-T3-S25">
+                                                            <rect key="frame" x="0.0" y="33" width="334" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -47,16 +47,16 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="frx-rU-O9T" secondAttribute="bottom" constant="7" id="KP3-dS-xrU"/>
-                                                <constraint firstItem="frx-rU-O9T" firstAttribute="centerY" secondItem="dfV-5i-fAx" secondAttribute="centerY" id="LDo-6U-xcT"/>
-                                                <constraint firstItem="frx-rU-O9T" firstAttribute="leading" secondItem="dfV-5i-fAx" secondAttribute="leadingMargin" constant="20" id="NcF-Ze-ehq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="frx-rU-O9T" secondAttribute="trailing" constant="20" id="fwy-IW-OG2"/>
-                                                <constraint firstItem="frx-rU-O9T" firstAttribute="top" secondItem="dfV-5i-fAx" secondAttribute="top" constant="7" id="vDc-gW-gm8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jMw-qD-DH5" secondAttribute="trailing" constant="20" id="4Tt-uo-DAJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jMw-qD-DH5" secondAttribute="bottom" constant="1.5" id="JJj-dc-FNh"/>
+                                                <constraint firstItem="jMw-qD-DH5" firstAttribute="centerY" secondItem="XNt-Qn-YhN" secondAttribute="centerY" id="L4Q-hI-33E"/>
+                                                <constraint firstItem="jMw-qD-DH5" firstAttribute="leading" secondItem="XNt-Qn-YhN" secondAttribute="leadingMargin" constant="20" id="bTf-Pi-6r4"/>
+                                                <constraint firstItem="jMw-qD-DH5" firstAttribute="top" secondItem="XNt-Qn-YhN" secondAttribute="topMargin" constant="1.5" id="irg-mS-A5F"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="hwLabel" destination="3R2-um-eIS" id="vOo-A0-Mjg"/>
-                                            <outlet property="subjectLabel" destination="z6S-Hp-JxT" id="LLa-Zn-Ulc"/>
+                                            <outlet property="hwLabel" destination="VEd-T3-S25" id="T1Y-PF-MTy"/>
+                                            <outlet property="subjectLabel" destination="5xw-7L-4yV" id="1Za-Od-3Tv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -70,7 +70,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="csB-gi-Pow">
+                    <navigationItem key="navigationItem" title="Домашнее задание" id="csB-gi-Pow">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="eOM-5S-T9Z">
                             <connections>
                                 <segue destination="Bv8-TL-HdG" kind="show" identifier="redact" id="7lr-h4-TW1"/>
@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="730.43478260869574" y="81.696428571428569"/>
         </scene>
-        <!--Homework Table View Controller-->
+        <!--Домашнее задание-->
         <scene sceneID="Kzq-h8-cHh">
             <objects>
                 <tableViewController id="Bv8-TL-HdG" customClass="HomeworkTableViewController" customModule="mySchoolLife" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +160,7 @@
                             <outlet property="delegate" destination="Bv8-TL-HdG" id="SGz-6x-c3G"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6dG-Wz-vYU">
+                    <navigationItem key="navigationItem" title="Домашнее задание" id="6dG-Wz-vYU">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="Tfc-Hq-TYK">
                             <connections>
                                 <action selector="saveTapped:" destination="Bv8-TL-HdG" id="BuD-qN-4Rc"/>

@@ -40,18 +40,18 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7jz-KS-ImT">
-                                        <rect key="frame" x="0.0" y="80" width="414" height="495"/>
+                                        <rect key="frame" x="0.0" y="80" width="414" height="522"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man-person-icon" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-XF-KmI">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="495"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="522"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-gH-DAW">
-                                        <rect key="frame" x="0.0" y="605" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="632" width="414" height="33"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я учусь в 6 классе!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Dsl-ji-0CR">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="30"/>
+                                                <rect key="frame" x="20" y="0.0" width="374" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="NMc-Eg-WQF"/>
                                                 </constraints>
@@ -66,22 +66,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Tl-nc-TQK">
-                                        <rect key="frame" x="0.0" y="665" width="414" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой средний балл 4.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNd-kr-BhN">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5Yt-V8-WiC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="gNd-kr-BhN" firstAttribute="leading" secondItem="4Tl-nc-TQK" secondAttribute="leading" constant="20" id="fwY-if-ZBh"/>
-                                            <constraint firstAttribute="trailing" secondItem="gNd-kr-BhN" secondAttribute="trailing" constant="20" id="nxt-Ns-Vg6"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="695" width="414" height="0.0"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -99,14 +84,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.2.fill" catalog="system" id="w6H-WK-JAM">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="gearShapeAction:" destination="DlP-EP-Oup" id="ktb-CV-NrA"/>
                                 <segue destination="K7N-26-19v" kind="show" identifier="child" id="hoQ-hE-kTG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="myGradePointAverage" destination="gNd-kr-BhN" id="bLR-8J-DVd"/>
                         <outlet property="nameLabel" destination="ZGe-LM-VZs" id="fOO-5d-ahB"/>
                         <outlet property="numberOfClassLabel" destination="Dsl-ji-0CR" id="VHV-wp-gDd"/>
                         <outlet property="profileImage" destination="A1Q-XF-KmI" id="4eT-pv-t5c"/>

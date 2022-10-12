@@ -78,18 +78,26 @@
 		8604133E28EC3B85003251FC /* mySchoolLife */ = {
 			isa = PBXGroup;
 			children = (
-				8604133F28EC3B85003251FC /* AppDelegate.swift */,
-				8604134128EC3B85003251FC /* SceneDelegate.swift */,
-				8604134528EC3B85003251FC /* Main.storyboard */,
+				861712D428F7186A009518CF /* Helpers */,
 				8618C7CE28EC61FD0049E739 /* Profile */,
 				866FB14728EC5AF700086D87 /* MarkGroup */,
 				866FB14628EC5AEE00086D87 /* HomeWork */,
-				8604134B28EC3B87003251FC /* Assets.xcassets */,
-				8604134D28EC3B87003251FC /* LaunchScreen.storyboard */,
-				8604135028EC3B87003251FC /* Info.plist */,
 				8604134828EC3B85003251FC /* mySchoolLife.xcdatamodeld */,
 			);
 			path = mySchoolLife;
+			sourceTree = "<group>";
+		};
+		861712D428F7186A009518CF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8604133F28EC3B85003251FC /* AppDelegate.swift */,
+				8604134128EC3B85003251FC /* SceneDelegate.swift */,
+				8604134528EC3B85003251FC /* Main.storyboard */,
+				8604134B28EC3B87003251FC /* Assets.xcassets */,
+				8604134D28EC3B87003251FC /* LaunchScreen.storyboard */,
+				8604135028EC3B87003251FC /* Info.plist */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8618C7CE28EC61FD0049E739 /* Profile */ = {
@@ -357,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 59WWFG63NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mySchoolLife/Info.plist;
+				INFOPLIST_FILE = mySchoolLife/Helpers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -387,7 +395,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 59WWFG63NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mySchoolLife/Info.plist;
+				INFOPLIST_FILE = mySchoolLife/Helpers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

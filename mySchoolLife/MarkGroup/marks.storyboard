@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="762" y="-161"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Мои оценки-->
         <scene sceneID="vbI-KN-cgt">
             <objects>
                 <tableViewController id="5ci-OQ-gB0" customClass="TableViewController" customModule="mySchoolLife" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="5ci-OQ-gB0" id="XCw-9p-z96"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ukr-Sx-Pqs">
+                    <navigationItem key="navigationItem" title="Мои оценки" id="Ukr-Sx-Pqs">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="jYB-sm-sV1">
                             <connections>
                                 <action selector="save:" destination="5ci-OQ-gB0" id="loy-sG-kEB"/>

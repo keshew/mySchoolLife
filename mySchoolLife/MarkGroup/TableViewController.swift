@@ -10,15 +10,21 @@ import CoreData
 
 class TableViewController: UITableViewController {
     
+    //MARK: - var/let
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var subject: Subjects?
     var arrayMarks: [String] = []
     var arraySubjects: [String] = []
     var array = [String:String]()
     
+    //MARK: - Outlets
     
     @IBOutlet weak var markTF: UITextField!
     @IBOutlet weak var subjectTF: UITextField!
+    
+    
+    //MARK: - Override
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +34,11 @@ class TableViewController: UITableViewController {
         }
     }
     
-    
-    @IBAction func save(_ sender: Any) {
-        if save()  == true {
-            self.navigationController?.popViewController(animated: true)
-        }
-        
-    }
-    
+    //MARK: - MainCode
     
     func save() -> Bool {
         if subject == nil {
-           
+            
             let entityDesc = NSEntityDescription.entity(forEntityName: "Subjects", in: context)
             let subjectObject = Subjects(entity: entityDesc!, insertInto: context)
             
@@ -47,7 +46,7 @@ class TableViewController: UITableViewController {
             self.array["marks"] = markTF.text
             self.arrayMarks.append(self.array["marks"]!)
             self.arraySubjects.append(self.array["subjects"]!)
-
+            
             subjectObject.setValue(subjectTF.text, forKey: "subjects")
             subjectObject.setValue(markTF.text, forKey: "marks")
             
@@ -71,14 +70,12 @@ class TableViewController: UITableViewController {
         return true
     }
     
+    //MARK: - Actions
     
-    
-    
-    
-    
-    
-    
-    
-    
+    @IBAction func save(_ sender: Any) {
+        if save()  == true {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }
 

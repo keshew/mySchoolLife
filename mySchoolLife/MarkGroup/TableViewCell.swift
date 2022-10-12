@@ -9,7 +9,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-
+    //MARK: - outlets
+    
     @IBOutlet weak var subectLabel: UILabel!
     @IBOutlet weak var marksLabel: UILabel!
     

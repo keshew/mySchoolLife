@@ -10,7 +10,12 @@ import CoreData
 
 class HomeworkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: - outlets
+    
     @IBOutlet weak var tableview: UITableView!
+    
+    
+    //MARK: - var/let
     
     var fetchController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Homework")
@@ -21,6 +26,7 @@ class HomeworkViewController: UIViewController, UITableViewDelegate, UITableView
         return resultCotroller
     }()
     
+    //MARK: - override
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +39,7 @@ class HomeworkViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    //MARK: - interface
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchController.sections {
@@ -69,13 +76,14 @@ class HomeworkViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 
+//MARK: - extensions
 
 extension HomeworkViewController:  NSFetchedResultsControllerDelegate {
-
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableview.beginUpdates()
     }
-
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
@@ -104,20 +112,20 @@ extension HomeworkViewController:  NSFetchedResultsControllerDelegate {
             break
         }
     }
-
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableview.endUpdates()
     }
-
-
-
+    
+    
+    
 }
 
 
 
 extension HomeworkViewController {
-
-
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let homework = fetchController.object(at: indexPath) as! Homework
@@ -125,19 +133,19 @@ extension HomeworkViewController {
             context.delete(homework)
             do {
                 try context.save()
-
+                
             } catch {
                 print(error)
             }
-
+            
         }
-
+        
     }
-
+    
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         .delete
     }
-
-
-
+    
+    
+    
 }

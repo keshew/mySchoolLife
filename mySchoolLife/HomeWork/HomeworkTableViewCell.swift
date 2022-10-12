@@ -9,6 +9,8 @@ import UIKit
 
 class HomeworkTableViewCell: UITableViewCell {
 
+    //MARK: - outlets
+    
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var hwLabel: UILabel!
     

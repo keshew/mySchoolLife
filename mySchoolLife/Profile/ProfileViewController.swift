@@ -10,19 +10,13 @@ import CoreData
 
 class ProfileViewController: UIViewController {
     
-    
-    
-    
-
-    
-    
     //MARK: - IBOutlets
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var secondNameLabel: UILabel!
     @IBOutlet weak var numberOfClassLabel: UILabel!
-    @IBOutlet weak var myGradePointAverage: UILabel!
+  
     
     
     //MARK: - Ovveride
@@ -62,21 +56,11 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    
-    
-   
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
-    //MARK: - MainCode
-    
-    
-    
+       
     
     //MARK: - IBActions
     
@@ -112,9 +96,6 @@ class ProfileViewController: UIViewController {
     }
     
     
-    @IBAction func gearShapeAction(_ sender: Any) {
-        
-    }
     
     
 }
